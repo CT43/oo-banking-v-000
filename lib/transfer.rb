@@ -17,7 +17,7 @@ class Transfer
 
   def execute_transaction
     binding.pry
-    if @sender.valid? == true && !@@all.include?(self)
+    if @sender.valid? == true && !@@all.include?(self) && @amount < @sender.balance
       @sender.balance -= @amount
       @receiver.balance += @amount
       @@all << self
