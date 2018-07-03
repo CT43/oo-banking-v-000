@@ -18,11 +18,11 @@ class Transfer
   def execute_transaction
     if sender.valid? == true && !@@all.include?(self)
       @sender.balance -= @amount
-      @receiver.balance += @amount   
+      @receiver.balance += @amount
       @@all << self  
     elsif @sender.valid? == false
       "Transaction rejected. Please check your account balance."
-
+    end 
   end
 
 end
