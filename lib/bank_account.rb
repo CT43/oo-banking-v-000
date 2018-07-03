@@ -1,3 +1,4 @@
+
 class BankAccount
   attr_accessor :balance, :status
   attr_reader :name
@@ -17,8 +18,8 @@ class BankAccount
   end
 
   def valid?
-    binding.pry 
-    @status = 'open' && @balance > 0 
+    binding.pry
+    @status = 'open' && @balance > 0
   end
 
 
